@@ -38,7 +38,7 @@ const Nav = styled.nav`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 8px;
+    padding: 6px;
     justify-content: space-around;
   }
 
