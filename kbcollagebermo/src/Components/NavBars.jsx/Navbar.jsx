@@ -185,8 +185,6 @@ const Nav = styled.div`
   nav .content_links p:hover {
     border: 1px solid #0a1347;
     padding: 4px 12px;
-    height: 100%;
-    width: 100%;
   }
   .menu_button {
     display: none;

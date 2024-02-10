@@ -1,21 +1,23 @@
 import styled from "styled-components";
 export default function SubNav() {
   const teacherNames = [
-    { name: "Salman Khan" },
-    { name: "Robert Downey Jr." },
-    { name: "Leonardo DiCaprio" },
-    { name: "Meryl Streep" },
-    { name: "Tom Hanks" },
-    { name: "Angelina Jolie" },
-    { name: "Denzel Washington" },
-    { name: "Natalie Portman" },
-    { name: "Brad Pitt" },
-    { name: "Viola Davis" },
-    { name: "Tom Cruise" },
-    { name: "Jennifer Lawrence" },
-    { name: "Johnny Depp" },
-    { name: "Charlize Theron" },
-    { name: "Morgan Freeman" },
+    { name: "K. P. Sinha" },
+    { name: "Laxmi Narayan" },
+    { name: "Alisha Vandana Lakra" },
+    { name: "Gopal Prajapati" },
+    { name: "Sajan Bharti" },
+    { name: "R. P. P. Singh" },
+    { name: "Nitin Chetan Tigga" },
+    { name: "Arun Kumar Roy" },
+    { name: "Neela Purnima Tirkey" },
+    { name: "Madhura Kerketta" },
+    { name: "Prabhakar Kumar" },
+    { name: "Manohar Manjhi" },
+    { name: "Amit Kumar Ravi" },
+    { name: "Vyas Kumar" },
+    { name: "Basudeo Prajapati" },
+    { name: "D. P. Kushwaha" },
+    { name: "Sanjay Kumar Das" },
   ];
 
   return (
