@@ -2,6 +2,47 @@ import SubNav from "./SubNav";
 import TobNav from "./TobNav";
 import styled from "styled-components";
 export default function Navbar() {
+  const handleShowDialog = () => {
+    document.getElementById("sidebar").showModal();
+  };
+
+  const handleCloseDialog = () => {
+    document.getElementById("sidebar").close();
+  };
+  const sidebarStyle = {
+    width: "250px",
+    height: "100%",
+    backgroundColor: "#fff",
+    color: "red",
+    position: "fixed",
+    top: "0",
+    right: "0",
+    paddingTop: "20px",
+    overflowY: "auto",
+    transition: "0.5s, right 0.5s",
+  };
+
+  const listItemStyle = {
+    padding: "10px 20px",
+    borderBottom: "1px solid #ffa500",
+    cursor: "pointer",
+    color: "#303f92",
+  };
+  const logo_cont = {
+    width: "32%",
+    margin: "auto",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+  };
+  const logostyle = {
+    width: "100%",
+  };
+  const col_name = {
+    fontSize: "10px",
+    fontWeight: "bold",
+    marginTop: "5px",
+  };
   return (
     <div>
       <TobNav />
@@ -26,7 +67,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="menu_button">
+          <div className="menu_button" onClick={handleShowDialog}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -56,6 +97,33 @@ export default function Navbar() {
         </nav>
       </Nav>
       <SubNav />
+
+      <dialog id="sidebar">
+        <div className="sidebar" style={sidebarStyle}>
+          <div style={logo_cont}>
+            <img
+              style={logostyle}
+              src="https://kbcollegebermo.ac.in/images/logo.png"
+            />
+            <p style={col_name}> K.B. COLLEGE, BERMO</p>
+          </div>
+          <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
+            <li onClick={handleCloseDialog} style={listItemStyle}>
+              X
+            </li>
+            <li style={listItemStyle}>Gallery</li>
+            <li style={listItemStyle}>Academics</li>
+            <li style={listItemStyle}>Gallery</li>
+            <li style={listItemStyle}>Academics</li>
+            <li style={listItemStyle}>Gallery</li>
+            <li style={listItemStyle}>Academics</li>
+            <li style={listItemStyle}>Gallery</li>
+            <li style={listItemStyle}>Academics</li>
+            <li style={listItemStyle}>About</li>
+            <li style={listItemStyle}>Contact</li>
+          </ul>
+        </div>
+      </dialog>
     </div>
   );
 }
