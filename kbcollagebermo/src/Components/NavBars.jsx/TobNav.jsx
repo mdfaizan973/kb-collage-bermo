@@ -32,7 +32,7 @@ export default function TobNav() {
   );
 }
 const Nav = styled.nav`
-  background-color: red;
+  background-color: #ff7900;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   nav {
     display: flex;

@@ -1,3 +1,4 @@
+import SubNav from "./SubNav";
 import TobNav from "./TobNav";
 import styled from "styled-components";
 export default function Navbar() {
@@ -54,6 +55,7 @@ export default function Navbar() {
           </div>
         </nav>
       </Nav>
+      <SubNav />
     </div>
   );
 }
@@ -103,6 +105,7 @@ const Nav = styled.div`
     align-items: center;
     width: 55%;
     justify-content: space-between;
+    gap: 5px;
   }
   nav .content_links p {
     font-weight: 600;
@@ -114,6 +117,8 @@ const Nav = styled.div`
   nav .content_links p:hover {
     border: 1px solid #0a1347;
     padding: 4px 12px;
+    height: 100%;
+    width: 100%;
   }
   .menu_button {
     display: none;
