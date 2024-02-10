@@ -1,8 +1,34 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 export default function Crausal() {
+  const images = [
+    "https://kbcollegebermo.ac.in/images/slider/9.jpg",
+    "https://kbcollegebermo.ac.in/images/slider/10.jpg",
+    "https://kbcollegebermo.ac.in/images/slider/11.jpg",
+    "https://kbcollegebermo.ac.in/images/slider/12.jpg",
+    "https://kbcollegebermo.ac.in/images/slider/13.jpg",
+    "https://kbcollegebermo.ac.in/images/slider/14.jpg",
+    "https://kbcollegebermo.ac.in/images/slider/15.jpg",
+    "https://kbcollegebermo.ac.in/images/slider/16.jpg",
+    "https://kbcollegebermo.ac.in/images/slider/17.jpg",
+    "https://kbcollegebermo.ac.in/images/slider/18.jpg",
+    "https://kbcollegebermo.ac.in/images/slider/19.jpg",
+  ];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <DIV>
-      <Carausal className="carausal">
+      <Carausal
+        className="carausal"
+        style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
+      >
         <div className="content">
           <div>
             <h1>Welcome to K.B. COLLEGE, BERMO</h1>
@@ -24,7 +50,8 @@ export default function Crausal() {
 const Carausal = styled.div`
   width: 100%;
   height: 100%;
-  background-image: url("https://kbcollegebermo.ac.in/images/gallery/5d45cb04-c0f4-4386-82e1-278ee04c78b6.JPG");
+  opacity: 0.8;
+  /* background-image: url("https://kbcollegebermo.ac.in/images/gallery/5d45cb04-c0f4-4386-82e1-278ee04c78b6.JPG"); */
   background-size: cover;
   background-position: center;
 `;
@@ -55,7 +82,7 @@ const DIV = styled.div`
     transition: all 0.3s ease-in-out;
     font-family: "Poppins", sans-serif;
     border: none;
-    margin: 5px 5px;
+    margin: 20px 5px 5px 0px;
   }
   .buttons button:nth-child(1) {
     background: #fff;
@@ -66,5 +93,20 @@ const DIV = styled.div`
   }
   @media screen and (min-width: 100px) and (max-width: 450px) {
     height: 40vh;
+    .content h1 {
+      font-size: 2rem;
+    }
+    .content p {
+      font-size: 1rem;
+    }
+  }
+  @media screen and (min-width: 450px) and (max-width: 999px) {
+    height: 40vh;
+    .content h1 {
+      font-size: 2rem;
+    }
+    .content p {
+      font-size: 1rem;
+    }
   }
 `;
