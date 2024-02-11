@@ -211,12 +211,17 @@ const DIV = styled.div`
     footer {
       display: flex;
       flex-direction: column;
+      height: 100%;
     }
     footer .college_logo,
     .college_links1,
     .college_links2,
     .college_links3 {
       width: 100%;
+    }
+    .college_links1-links li {
+      line-height: 1.8;
+      font-size: 1rem;
     }
   }
 `;
