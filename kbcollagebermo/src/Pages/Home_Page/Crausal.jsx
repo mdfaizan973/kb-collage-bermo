@@ -31,7 +31,10 @@ export default function Crausal() {
       >
         <div className="content">
           <div>
-            <h1>Welcome to K.B. COLLEGE, BERMO</h1>
+            <h1>
+              Welcome to{" "}
+              <span className="name_highlighte">K.B. COLLEGE, BERMO</span>
+            </h1>
             <p>
               Welcome to K. B. College, Bermo. Get ready to embrace knowledge,
               experiences, <br /> and memories that will last a lifetime.
@@ -90,6 +93,9 @@ const DIV = styled.div`
   .buttons button:nth-child(2) {
     background: #8c182e;
     color: #ffffff;
+  }
+  .name_highlighte {
+    color: #ff7900;
   }
   @media screen and (min-width: 100px) and (max-width: 450px) {
     height: 40vh;

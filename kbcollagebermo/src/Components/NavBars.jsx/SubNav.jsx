@@ -53,7 +53,7 @@ const DIV = styled.div`
     margin-right: 20px;
     width: 100%;
     display: flex;
-    animation: scrollNames 20s linear infinite;
+    animation: scrollNames 30s linear infinite;
   }
   .superstar_group .name_container p {
     margin-right: 50px;
