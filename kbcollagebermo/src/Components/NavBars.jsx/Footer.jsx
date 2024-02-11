@@ -8,6 +8,11 @@ export default function Footer() {
             src="https://kbcollegebermo.ac.in/images/logo-white.png"
             alt="logo"
           />
+          <div className="college_names">
+            <h1>K.B. College, Bermo </h1>
+            <h2>A Constituent Unit of B.B.M.K. University,Dhanbad</h2>
+            <h3>NAAC ACCREDITED GRADE B</h3>
+          </div>
         </div>
         <div className="college_links1">2</div>
         <div className="college_links2">3</div>
@@ -32,9 +37,9 @@ export default function Footer() {
 
 const DIV = styled.div`
   footer {
-    height: 50vh;
+    height: 55vh;
     width: 99%;
-    margin: auto;
+    margin: 40px auto auto auto;
     color: white;
     background-color: #ff7900;
     border-radius: 50px 50px 0 0;
@@ -42,24 +47,26 @@ const DIV = styled.div`
     justify-content: space-around;
   }
   .college_logo {
-    border: 1px solid white;
     width: 23%;
     text-align: center;
-    padding: 10px;
+    padding-top: 40px;
   }
   .college_links1 {
     border: 1px solid white;
     width: 23%;
+    padding-top: 40px;
     text-align: center;
   }
   .college_links2 {
     border: 1px solid white;
     width: 23%;
+    padding-top: 40px;
     text-align: center;
   }
   .college_links3 {
     border: 1px solid white;
     width: 23%;
+    padding-top: 40px;
     text-align: center;
   }
   .copyright {
@@ -76,6 +83,13 @@ const DIV = styled.div`
   }
   .developer {
     font-weight: 700;
+    color: red;
+  }
+  .college_names h2 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+  .college_names h3 {
     color: red;
   }
   @media screen and (min-width: 100px) and (max-width: 450px) {
