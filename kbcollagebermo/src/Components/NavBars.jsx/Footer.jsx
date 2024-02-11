@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { BsFacebook, BsTwitter, BsLinkedin, BsInstagram } from "react-icons/bs";
+
 export default function Footer() {
   return (
     <DIV>
@@ -14,9 +16,56 @@ export default function Footer() {
             <h3>NAAC ACCREDITED GRADE B</h3>
           </div>
         </div>
-        <div className="college_links1">2</div>
-        <div className="college_links2">3</div>
-        <div className="college_links3">4</div>
+        <div className="college_links1">
+          {/* <h3>Quick Links</h3> */}
+          <ul className="college_links1-links">
+            <li>Quick Links</li>
+
+            <li>Notice</li>
+            <li>Syllabus</li>
+            <li>Admission List</li>
+            <li>Events</li>
+            <li>Gallery</li>
+            <li>Contact us</li>
+            <li>Sitemap</li>
+          </ul>
+        </div>
+        <div className="college_links2">
+          {/* <h3>Useful Link</h3> */}
+          <ul className="college_links1-links">
+            <li>Useful Link</li>
+            <li>BBMKU</li>
+            <li>UGC</li>
+            <li>Chancellor Portal</li>
+            <li>MHRD</li>
+            <li>AISHE</li>
+            <li>E-Kalyan</li>
+            <li>Admid Card/ Result BBMKU</li>
+          </ul>
+        </div>
+        <div className="college_links3">
+          <ul className="college_links3-links">
+            <li>Contact Us</li>
+
+            <li>P.O. : Jarangdih, Dist. : Bokaro - 829113 (Jharkhand)</li>
+            <li>Phone : +91 8092129391</li>
+            <li>Email : principalbermo@gmail.com</li>
+            <div className="social_media">
+              <p>
+                <BsFacebook />
+              </p>
+              <p>
+                <BsInstagram />
+              </p>
+              <p>
+                <BsLinkedin />
+              </p>
+              <p>
+                <BsTwitter />
+              </p>
+            </div>
+          </ul>
+        </div>
       </footer>
       <div className="footer">
         <div className="copyright">
@@ -52,22 +101,19 @@ const DIV = styled.div`
     padding-top: 40px;
   }
   .college_links1 {
-    border: 1px solid white;
     width: 23%;
     padding-top: 40px;
-    text-align: center;
+    text-align: start;
   }
   .college_links2 {
-    border: 1px solid white;
     width: 23%;
     padding-top: 40px;
-    text-align: center;
+    text-align: start;
   }
   .college_links3 {
-    border: 1px solid white;
     width: 23%;
     padding-top: 40px;
-    text-align: center;
+    text-align: start;
   }
   .copyright {
     width: 99%;
@@ -92,6 +138,75 @@ const DIV = styled.div`
   .college_names h3 {
     color: red;
   }
+  /* footer_links */
+
+  .college_links1-links {
+    width: 50%;
+    margin: auto;
+  }
+  .college_links1-links li:nth-child(1) {
+    font-size: 1.4rem;
+  }
+  .college_links1-links li {
+    list-style: none;
+    line-height: 2.3;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    cursor: pointer;
+    position: relative; /* Needed for absolute positioning of the ::after pseudo-element */
+  }
+
+  .college_links1-links li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+
+  .college_links1-links li:hover::after {
+    width: 100%;
+  }
+
+  /*  */
+  .college_links3-links {
+    width: 70%;
+    margin: auto;
+  }
+  .college_links3-links li {
+    list-style: none;
+    cursor: pointer;
+    line-height: 2.4;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .college_links3-links li:hover {
+    color: red;
+    transition: 0.7s ease;
+  }
+  .college_links3-links li:nth-child(1) {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+  }
+  .social_media {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .social_media p:hover {
+    color: red;
+    cursor: pointer;
+    transition: 0.7s ease;
+  }
+  /*  */
   @media screen and (min-width: 100px) and (max-width: 450px) {
     footer {
       display: flex;
