@@ -49,10 +49,15 @@ export default function CourseOffer() {
 const DIV = styled.div`
   width: 90%;
   margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 15px 15px 0 0;
+
   .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
+    padding: 10px;
     text-align: center;
   }
 
@@ -84,6 +89,11 @@ const DIV = styled.div`
   }
   .heading {
     margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #ff7900;
+    border-radius: 15px 15px 0 0;
+
+    color: #fff;
   }
   .card:nth-child(1) {
     background-color: #28a745;
