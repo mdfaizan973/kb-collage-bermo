@@ -8,6 +8,7 @@ export default function App() {
       <Navbar />
       {/* <AllRoutes /> */}
       <Page_Landing />
+
       <Footer />
     </div>
   );
