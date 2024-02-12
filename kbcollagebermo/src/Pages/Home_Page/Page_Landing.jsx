@@ -1,4 +1,5 @@
 import About_college from "./About_college";
+import CollegeBranch from "./CollegeBranch";
 import CourseOffer from "./CourseOffer";
 import Crausal from "./Crausal";
 import Principal from "./Principal";
@@ -14,6 +15,7 @@ export default function Page_Landing() {
       <CourseOffer />
       <Vision />
       <About_college />
+      <CollegeBranch />
     </div>
   );
 }
