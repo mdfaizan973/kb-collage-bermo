@@ -94,7 +94,33 @@ const DIV = styled.div`
     .container_main {
       display: flex;
       flex-direction: column;
-      height: 50vh;
+      height: 100%;
+      width: 90%;
+    }
+    .content,
+    .image {
+      width: 100%;
+    }
+    .image .image_princ {
+      width: 100%;
+    }
+    .content .heading h1 {
+      font-size: 20px;
+    }
+    .names {
+      margin-top: 10px;
+    }
+    .text_container .paragraph {
+      font-size: 16px;
+      position: relative;
+      margin-top: 1rem;
+    }
+  }
+  @media screen and (min-width: 451px) and (max-width: 1150px) {
+    .container_main {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       width: 90%;
     }
     .content,
