@@ -71,6 +71,7 @@ const DIV = styled.div`
   .card h2 {
     font-size: 22px;
     margin-bottom: 10px;
+    margin-top: 7px;
     color: #fff;
   }
 

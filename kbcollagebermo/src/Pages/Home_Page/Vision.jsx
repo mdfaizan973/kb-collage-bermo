@@ -3,7 +3,7 @@ export default function Vision() {
   return (
     <DIV>
       <div className="banner_contaner">
-        <img src="https://private-user-images.githubusercontent.com/106812942/304163089-eb21e21c-8a19-411d-a45c-1bff260eba10.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDc3NTczNjUsIm5iZiI6MTcwNzc1NzA2NSwicGF0aCI6Ii8xMDY4MTI5NDIvMzA0MTYzMDg5LWViMjFlMjFjLThhMTktNDExZC1hNDVjLTFiZmYyNjBlYmExMC5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIxMlQxNjU3NDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00NTdkMzUwZGEzNTRmOTE5ZjM5MjcyNzdmYzA5MTA1NWNhNDJkMGQ3ODMyMjFkZjQ5NmVmYTI1NTQzZmJjN2VkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.5ctBA3C7X-oJOFk5sN-bl7zfu6jH4JbRN2_-0gHDJco" />
+        <img src="https://i.ibb.co/hYd5swF/ollere.png" />
         <div className="content_text">
           <p>Vision</p>
           <h1>Our Vision</h1>
