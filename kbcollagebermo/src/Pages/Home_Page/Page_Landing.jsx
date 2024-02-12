@@ -2,6 +2,7 @@ import CourseOffer from "./CourseOffer";
 import Crausal from "./Crausal";
 import Principal from "./Principal";
 import Teacher from "./Teacher";
+import Vision from "./Vision";
 
 export default function Page_Landing() {
   return (
@@ -10,6 +11,7 @@ export default function Page_Landing() {
       <Principal />
       <Teacher />
       <CourseOffer />
+      <Vision />
     </div>
   );
 }
