@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-export default function Teacher() {
+import { BsLinkedin } from "react-icons/bs";
+
+export default function Teachers_page() {
   const teacher_Details = [
     {
       image:
@@ -26,6 +27,84 @@ export default function Teacher() {
       name: "Prof. D. P. Kushwaha",
       position: "H.o.D - Dept. of BCA",
     },
+    {
+      image:
+        "https://kbcollegebermo.ac.in/images/faculty/db108d22-7d0f-4510-90f3-b21033c9891a.jpg",
+      name: "Prof. Snajay Kumar Das",
+      position: "Department of B.B.A",
+    },
+    {
+      image:
+        "https://kbcollegebermo.ac.in/images/faculty/359e9713-ae9d-4d25-a47c-4c2bbdced1de.jpg",
+      name: "Dr. Alisha Vandana Lakra",
+      position: "H.o.D. - Dept.of English",
+    },
+    {
+      image:
+        "https://kbcollegebermo.ac.in/images/faculty/94fb80bc-acbb-4186-8479-2c62b528ac0f.jpg",
+      name: "Dr.  Neela Purnima Tirkey",
+      position: "H.o.D. - Dept.of Political Science",
+    },
+    {
+      image:
+        "https://kbcollegebermo.ac.in/images/faculty/204c6464-ce73-470c-aaae-7bd9f4f8f8f7.jpg",
+      name: "Dr.  Madhura Kerketta",
+      position: "H.o.D. - Dept.of Hindi",
+    },
+    {
+      image:
+        "https://kbcollegebermo.ac.in/images/faculty/09d0b508-d71d-4d1d-a94d-294a9a49749f.jpg",
+      name: "Dr.  Sajan Bharti",
+      position: "H.o.D. - Dept.of Sociology",
+    },
+    {
+      image:
+        "https://kbcollegebermo.ac.in/images/faculty/2e70b03c-993b-44c8-a9c8-638d5ac939d9.jpg",
+      name: "Dr.  Arun Kumar Roy Mahato",
+      position: "H.o.D. - Dept.of Zoology",
+    },
+    {
+      image:
+        "https://kbcollegebermo.ac.in/images/faculty/af31c4b3-f572-4ef8-8690-911396969419.jpg",
+      name: "Dr.  R. P. P. Singh",
+      position: "H.o.D. - Dept.of Commerce",
+    },
+    {
+      image:
+        "https://kbcollegebermo.ac.in/images/faculty/b557881e-093a-41a9-a591-73faa0f60708.jpg",
+      name: "Prof.  Nitin Chetan Tigga",
+      position: "H.o.D. - Dept.of Economics",
+    },
+    {
+      image:
+        "https://kbcollegebermo.ac.in/images/faculty/a32971d6-2769-429b-a800-65d6d9ef4193.jpg",
+      name: "Dr.  Prabhakar Kumar",
+      position: "H.o.D. - Dept.of Psychology",
+    },
+    {
+      image:
+        "https://kbcollegebermo.ac.in/images/faculty/713a80c1-707b-4a04-91e6-8d62ff5f9c92.jpg",
+      name: "Prof.  Manohar Manjhi",
+      position: "H.o.D. - Dept.of History",
+    },
+    {
+      image:
+        "https://kbcollegebermo.ac.in/images/faculty/0e7eb1f4-e039-48c8-a03a-874ee92562a4.jpg",
+      name: "Prof.  Amit Kumar Ravi",
+      position: "Dept. of History",
+    },
+    {
+      image:
+        "https://kbcollegebermo.ac.in/images/faculty/73ac9298-1a6d-4dea-ab8c-f6b102f4ac67.jpg",
+      name: "Dr.  Vyas Kumar",
+      position: "Dept. of History",
+    },
+    {
+      image:
+        "https://kbcollegebermo.ac.in/images/faculty/d8d5b0a7-a3c9-4444-bef2-409f7853c9e3.jpg",
+      name: "Dr.  Basudeo Prajapati",
+      position: "Dept. of Political Science",
+    },
   ];
   return (
     <DIV>
@@ -42,16 +121,16 @@ export default function Teacher() {
             <div className="card" key={i}>
               <img src={ele.image} alt="Faculty Image" />
               <h2 className="name">
-                {ele.name} <br /> <span>{ele.position}</span>
+                {ele.name} <br />
+                <abbr title="LinkedIn profile">
+                  <BsLinkedin />
+                </abbr>
+                <br /> <span>{ele.position}</span>
               </h2>
             </div>
           ))}
-        </div>
-        <div className="more_button">
-          <Link to="/teachers">
-            <button>View More -</button>
-          </Link>
-        </div>
+        </div>{" "}
+        {/**/}
       </div>
     </DIV>
   );
@@ -73,10 +152,10 @@ const DIV = styled.div`
     font-size: 1.2rem;
   }
   .image_container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    justify-content: space-around;
-    padding: 20px;
+    padding: 2px;
   }
   .card {
     width: 300px;
