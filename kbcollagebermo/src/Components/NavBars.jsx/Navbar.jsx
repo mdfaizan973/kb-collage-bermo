@@ -1,6 +1,8 @@
 import SubNav from "./SubNav";
 import TobNav from "./TobNav";
 import styled from "styled-components";
+import { Link as RouterLink } from "react-router-dom";
+
 export default function Navbar() {
   const handleShowDialog = () => {
     document.getElementById("sidebar").showModal();
@@ -50,12 +52,16 @@ export default function Navbar() {
         <nav>
           <div className="nav_logo">
             <div className="logo_container">
-              <img
-                src="https://kbcollegebermo.ac.in/images/logo.png"
-                className="log_image"
-                alt="collage-logo"
-              />
+              <RouterLink to="/">
+                {" "}
+                <img
+                  src="https://kbcollegebermo.ac.in/images/logo.png"
+                  className="log_image"
+                  alt="collage-logo"
+                />{" "}
+              </RouterLink>
             </div>
+
             <div className="collage_name">
               <h3 className="name">
                 K.B. COLLEGE, BERMO
@@ -86,13 +92,15 @@ export default function Navbar() {
             </svg>
           </div>
           <div className="content_links">
-            <p href="#">Home</p>
-            <p href="#">Departments</p>
-            <p href="#">Admission</p>
-            <p href="#">Course</p>
-            <p href="#">Academics</p>
-            <p href="#">Life@Campus</p>
-            <p href="#">Gallery</p>
+            <RouterLink to="/">
+              <p>Home</p>
+            </RouterLink>
+            <p>Departments</p>
+            <p>Admission</p>
+            <p>Course</p>
+            <p>Academics</p>
+            <p>Life@Campus</p>
+            <p>Gallery</p>
           </div>
         </nav>
       </Nav>
@@ -100,17 +108,23 @@ export default function Navbar() {
 
       <dialog id="sidebar">
         <div className="sidebar" style={sidebarStyle}>
-          <div style={logo_cont}>
-            <img
-              style={logostyle}
-              src="https://kbcollegebermo.ac.in/images/logo.png"
-            />
-            <p style={col_name}> K.B. COLLEGE, BERMO</p>
-          </div>
+          <RouterLink to="/">
+            <div style={logo_cont}>
+              <img
+                style={logostyle}
+                src="https://kbcollegebermo.ac.in/images/logo.png"
+              />{" "}
+              <p style={col_name}> K.B. COLLEGE, BERMO</p>
+            </div>
+          </RouterLink>
+
           <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
             <li onClick={handleCloseDialog} style={listItemStyle}>
               X
             </li>
+            <RouterLink to="/">
+              <li style={listItemStyle}>Home</li>
+            </RouterLink>
             <li style={listItemStyle}>Gallery</li>
             <li style={listItemStyle}>Academics</li>
             <li style={listItemStyle}>Gallery</li>
